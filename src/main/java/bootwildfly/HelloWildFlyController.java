@@ -3,7 +3,6 @@ package bootwildfly;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 @RestController
 public class HelloWildFlyController {
@@ -21,13 +20,6 @@ public class HelloWildFlyController {
     
     @RequestMapping("info")
     public String info(){
-        try {
-            InetAddress addr = java.net.InetAddress.getLocalHost();    
-            String hostname = addr.getHostName();
-            return ("Locathost : " + addr + "\n" + "HostName : " + hostname);
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
-        retrun "error";
+        return InetAddress.getHostAddress();
     }
 }
