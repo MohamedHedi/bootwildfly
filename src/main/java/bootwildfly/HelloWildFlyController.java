@@ -26,7 +26,7 @@ public class HelloWildFlyController {
             String hostname = addr.getHostName();
             return ("Locathost : " + addr + "\n" + "HostName : " + hostname);
         } catch (UnknownHostException e) {
-            retrun "error : " + e.printStackTrace();
+            e.printStackTrace();
         }
         
     }
