@@ -23,7 +23,6 @@ public class HelloWildFlyController {
     public String info(){
         InetAddress addr = java.net.InetAddress.getLocalHost();    
         String hostname = addr.getHostName();
-        return ("Locathost : " + addr + "\n"
-                "HostName : " + hostname);
+        return ("Locathost : " + addr + "\n" + "HostName : " + hostname);
     }
 }
