@@ -28,6 +28,6 @@ public class HelloWildFlyController {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        
+        retrun "error";
     }
 }
