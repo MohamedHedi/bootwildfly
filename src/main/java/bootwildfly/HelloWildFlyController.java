@@ -21,8 +21,13 @@ public class HelloWildFlyController {
     
     @RequestMapping("info")
     public String info(){
-        InetAddress addr = java.net.InetAddress.getLocalHost();    
-        String hostname = addr.getHostName();
-        return ("Locathost : " + addr + "\n" + "HostName : " + hostname);
+        try {
+            InetAddress addr = java.net.InetAddress.getLocalHost();    
+            String hostname = addr.getHostName();
+            return ("Locathost : " + addr + "\n" + "HostName : " + hostname);
+        } catch (UnknownHostException e) {
+            retrun "error : " + e.printStackTrace();
+        }
+        
     }
 }
