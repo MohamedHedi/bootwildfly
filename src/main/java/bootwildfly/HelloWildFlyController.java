@@ -11,4 +11,9 @@ public class HelloWildFlyController {
     public String sayHello(){
         return ("Hello, SpringBoot on Wildfly");
     }
+    
+    @RequestMapping("version")
+    public String version(){
+        return ("1.0.0");
+    }
 }
