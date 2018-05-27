@@ -15,7 +15,7 @@ public class HelloWildFlyController {
     
     @RequestMapping("version")
     public String version(){
-        return ("My Version : 4.0.0");
+        return ("My Version : 1.0.0");
     }
     
     @RequestMapping("whoami")
